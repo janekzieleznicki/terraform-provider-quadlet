@@ -1,0 +1,7 @@
+---web.service---
+[Unit]
+Description=web
+
+[Service]
+ExecStart=/usr/bin/podman run --name systemd-%N quay.io/libpod/alpine:latest
+

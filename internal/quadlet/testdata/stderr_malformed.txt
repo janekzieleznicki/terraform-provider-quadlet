@@ -1,0 +1,4 @@
+quadlet-generator[1068558]: Loading source unit file /tmp/stage/broken.container
+quadlet-generator[1068558]: error loading "/tmp/stage/broken.container", file contains line 1: "[Container" which is not a key-value pair, group, or comment
+quadlet-generator[1068558]: No files parsed from [/tmp/stage]
+quadlet-generator[1068558]: processing encountered some errors

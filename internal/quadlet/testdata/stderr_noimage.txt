@@ -1,0 +1,3 @@
+quadlet-generator[1068552]: Loading source unit file /tmp/stage/noimage.container
+quadlet-generator[1068552]: converting "noimage.container": no Image or Rootfs key specified
+quadlet-generator[1068552]: processing encountered some errors

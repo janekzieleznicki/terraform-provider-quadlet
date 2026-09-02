@@ -1,0 +1,3 @@
+quadlet-generator[1493527]: Loading source unit file /tmp/stage/typo.container
+quadlet-generator[1493527]: converting "typo.container": unsupported key 'Imagee' in group 'Container' in /tmp/stage/typo.container
+quadlet-generator[1493527]: processing encountered some errors
