@@ -1,0 +1,57 @@
+# Compiled provider binary
+terraform-provider-quadlet
+terraform-provider-quadlet_v*
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go build & test artifacts
+*.test
+*.out
+coverage.txt
+coverage.html
+go.work
+go.work.sum
+dist/
+
+# Terraform / OpenTofu working state.
+# Provider repos check in neither lockfiles nor state for their own examples:
+# examples/ is documentation input for tfplugindocs, not a deployed root module.
+**/.terraform/*
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# terraform-plugin-testing scratch. TF_ACC_PERSIST_WORKING_DIR and
+# TF_ACC_TEMP_DIR drop working dirs here during acceptance runs.
+.testacc/
+
+# Tier 3 Vagrant/libvirt smoke environment
+.vagrant/
+*.box
+
+# Local-only credentials for the SSH transport. Never commit test keys:
+# a committed private key is a leak even when it only unlocks a scratch VM.
+test/**/id_ed25519
+test/**/id_ed25519.pub
+test/**/id_rsa*
+*.pem
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store

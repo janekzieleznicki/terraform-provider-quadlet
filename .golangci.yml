@@ -1,0 +1,40 @@
+# golangci-lint configuration for terraform-provider-quadlet
+# Targets golangci-lint v2.13.2 and the version 2 config schema.
+# The v2 schema uses top-level `linters:` (with nested `enable:`, `settings:`, `exclusions:`)
+# and a separate top-level `formatters:` section.
+version: "2"
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - bodyclose
+    - copyloopvar
+    - misspell
+    - nilerr
+    - revive
+    - unconvert
+    - unparam
+    - usestdlibvars
+    - whitespace
+  exclusions:
+    rules:
+      # Tests routinely ignore returns from cleanup helpers, and table-driven
+      # helpers legitimately carry unused parameters.
+      - path: _test\.go
+        linters:
+          - errcheck
+          - unparam
+
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  settings:
+    goimports:
+      # v2 renamed this from a scalar to a list.
+      local-prefixes:
+        - github.com/janekzieleznicki/terraform-provider-quadlet
