@@ -177,5 +177,5 @@ prefixed `tf-acc-` so `make sweep` can reap anything an interrupted run leaked.
 
 ## License
 
-Intended: MPL-2.0, matching the Terraform provider ecosystem. The `LICENSE` file is not yet
-committed.
+MPL-2.0 — see [LICENSE](LICENSE).
+
